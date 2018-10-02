@@ -1,4 +1,6 @@
-// Create a Title component that'll render an <h1> tag with some styles
+import React, { Component } from 'react'
+import styled from 'styled-components'
+
 const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
@@ -11,11 +13,16 @@ const Wrapper = styled.section`
   background: papayawhip;
 `;
 
-export default // Use Title and Wrapper like any other React component – except they're styled!
-render(
-  <Wrapper>
-    <Title>
-      Hello World, this is my first styled component!
-    </Title>
-  </Wrapper>
-);
+class Container extends Component {
+  render() {
+    return (
+      <Wrapper>
+        <Title>
+          hello
+        </Title>
+      </Wrapper>
+    )
+  }
+}
+
+export default Container

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
+import StyledComponents from './styled-components/08-animations'
 import './App.css';
-
-import GetStarted from './styled-components/01-get-started'
 
 class App extends Component {
   render() {
     return (
-      <GetStarted></GetStarted>
+      <StyledComponents></StyledComponents>
     );
   }
 }
