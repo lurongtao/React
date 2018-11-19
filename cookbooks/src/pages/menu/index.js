@@ -1,4 +1,4 @@
-import Menu from './MenuContainer'
+import Menu from './views/MenuContainer'
 
 export {
   Menu

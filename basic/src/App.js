@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import StyledComponents from './styled-components/08-animations'
+import NormalComp from './high-order-components/NormalComp'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <StyledComponents></StyledComponents>
+      <NormalComp></NormalComp>
     );
   }
 }

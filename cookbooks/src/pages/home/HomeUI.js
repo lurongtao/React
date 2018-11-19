@@ -4,14 +4,17 @@ import { TabBar } from 'antd-mobile'
 
 import { Cookbook } from '../cookbook'
 import { Menu } from '../menu'
+import { Map } from '../map'
 import { More } from '../more'
 
-import cookbook from '../../assets/cookbook.png'
-import cookbook_active from '../../assets/cookbook-active.png'
-import menu from '../../assets/menu.png'
-import menu_active from '../../assets/menu-active.png'
-import more from '../../assets/more.png'
-import more_active from '../../assets/more-active.png'
+import cookbook from 'images/cookbook.png'
+import cookbook_active from 'images/cookbook-active.png'
+import menu from 'images/menu.png'
+import menu_active from 'images/menu-active.png'
+import map from 'images/location.png'
+import map_active from 'images/location-active.png'
+import more from 'images/more.png'
+import more_active from 'images/more-active.png'
 
 const HomeUI = (props) => {
   return (
@@ -23,7 +26,7 @@ const HomeUI = (props) => {
         hidden={props.hidden}
       >
         <TabBar.Item
-          title="菜谱大全"
+          title="大全"
           key="cookbook"
           icon={<div style={{
             width: '22px',
@@ -61,6 +64,26 @@ const HomeUI = (props) => {
           }}
         >
           <Menu></Menu>
+        </TabBar.Item>
+        <TabBar.Item
+          title="地图"
+          key="more"
+          icon={<div style={{
+            width: '24px',
+            height: '24px',
+            background: `url(${map}) center center /  23px 23px no-repeat` }}
+          />}
+          selectedIcon={<div style={{
+            width: '24px',
+            height: '24px',
+            background: `url(${map_active}) center center /  23px 23px no-repeat` }}
+          />}
+          selected={props.selectedTab === 'map'}
+          onPress={() => {
+            props.handlePress('map')
+          }}
+        >
+          <Map></Map>
         </TabBar.Item>
         <TabBar.Item
           title="更多"
